@@ -1,0 +1,131 @@
+		7. Setup IDE
+		==========
+
+>> What is IDE...?
+      Integreated Development Environment
+      It's an Central Hub for coding, finding problems and testing
+      Designed to Improve developer efficiency
+
+>> Need of ODE
+     Increase Productivity
+     Offers a Efficient WorkSpace
+     IDE Features :
+	Code Autocomplete
+	Syntax Highlighting
+	Version Control
+	Error Checking
+>> Search Download Node JS -->> Download Long Term Support Version (LTS Version)
+>> Installtion and Setup
+	Search VS Code and Donwload 
+	Keep your Software Up to Date
+
+>>VsCode Extensions and Settings
+	1. Live Server / Live Preview
+	2. Prettier (Format on Save)
+	3. Line Wrap
+	4. Tab Size from 4 to 2
+---------------------------------------------------------------------------------------------------------------------------
+		8. Create a React App
+		================
+Official Tool is CRA (Create React App)
+Vite is a Modern Tool to create React Project
+Vite Produces Qick and Small Bundle size
+Vite : npm run dev to to launch dev server
+          ==========
+Use npm start for CRA
+       ========
+		{
+		  PS C:\Users\DELL\OneDrive\Desktop\React> ls
+
+
+		 Directory: C:\Users\DELL\OneDrive\Desktop\React
+
+		Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+		d-----        11/20/2024   2:40 PM                Notes
+		d-----        11/20/2024   2:40 PM                Projects
+		d-----        11/20/2024   2:41 PM                Reacts Chapters
+		
+
+		PS C:\Users\DELL\OneDrive\Desktop\React> npm create vite@latest
+		Need to install the following packages:
+		create-vite@5.5.5
+			Ok to proceed? (y) y
+		√ Select a variant: » JavaScript
+
+		Scaffolding project in C:\Users\DELL\OneDrive\Desktop\React\first-react-app...
+
+		Done. Now run:
+	
+		cd first-react-app
+		npm install
+		npm run dev
+
+
+ 		   Directory: C:\Users\DELL\OneDrive\Desktop\React
+
+
+		Mode                 LastWriteTime         Length Name
+		----                 -------------         ------ ----
+		d-----        11/20/2024   2:40 PM                Notes
+		d-----        11/20/2024   2:44 PM                Reacts Chapters
+	
+
+		PS C:\Users\DELL\OneDrive\Desktop\React> cd '.\Reacts Chapters\'
+		PS C:\Users\DELL\OneDrive\Desktop\React\Reacts Chapters> ls
+
+
+		    Directory: C:\Users\DELL\OneDrive\Desktop\React\Reacts Chapters
+
+
+		Mode                 LastWriteTime         Length Name
+		----                 -------------         ------ ----
+		d-----        11/20/2024   2:44 PM                first-react-app
+
+
+		PS C:\Users\DELL\OneDrive\Desktop\React\Reacts Chapters> cd .\first-react-app\
+		PS C:\Users\DELL\OneDrive\Desktop\React\Reacts Chapters\first-react-app> npm install
+
+		added 248 packages, and audited 249 packages in 38s
+
+		102 packages are looking for funding
+		  run `npm fund` for details
+
+		found 0 vulnerabilities
+		PS C:\Users\DELL\OneDrive\Desktop\React\Reacts Chapters\first-react-app> npm run dev
+
+		> first-react-app@0.0.0 dev
+		> vite
+
+
+		  VITE v5.4.11  ready in 434 ms
+
+ 		 ➜  Local:   http://localhost:5173/
+  		➜  Network: use --host to expose
+  		➜  press h + enter to show help
+		
+		}
+
+---------------------------------------------------------------------------------------------------------------------------
+		9. Project Structure
+		===============
+
+node_modules/ has all the installed node packages
+public/ Directory :  contains static files that don't change
+src/ Directory : Main folder for the React code.
+	1. components/: Reusable parts of the UI, like buttons or headers.
+	2. assests/: Images, fonts, and other static files.
+	3. styles/: CSS or stylesheets.
+package.json contains information about the project like name, version, dependencies on other react packages.
+vite.config.js contains the vite config.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+		Summary :->>
+		=======
+			Setup IDE
+			Create a React App
+			Project Structure
+---------------------------------------------------------------------------------------------------------------------------
+

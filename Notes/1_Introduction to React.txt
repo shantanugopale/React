@@ -1,0 +1,53 @@
+
+	1. What is React
+React is a JavaScript library.
+used to build Dynamic and interactive UI
+Developed at Facebook in 2011 
+Most widely used Js Library for front-end-dev.
+Used to create Single Page Application(Page does not refresh)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	2. Working of DOM
+Browser takes HTML from the Server and Create DOM
+JS Helps us modify DOM based on User Actions or Events.
+In Big Applications Working with DOM becomes Complicated.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	3. Problems with Javascript
+React has simpler mental Model.
+JS is hard to maintain.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	4. Working of React
+No need to Worrying about creating and Updating DOM Elements.
+React creates a Webpage with Small and Reusable Components
+React will take care of Creating and Updating DOM Elements.
+It saves a Lot of  time.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	5. JS vs React
+JS =>You define the steps to reach your desired state
+ReactJS=>You define the Targer UI State and then React figured out how to reach out that state
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	6. Introduction to Components
+Components helps us to write Reusable, Modular, and better organized code
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	7. Introduction to Components
+E.g->> Header Component, Body Component, Navigation Component, and Footer Component is Separate.
+React Application is a Tree of  Component with App
+Component as the root bringing everything together
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+	SUMMARY  :: ==>
+	=========
+			What is React..?
+			Working of DOM
+			Problems with JS
+			Working of React
+			JS vs React
+			Intro to Components
+
+
+
