@@ -56,22 +56,3 @@ Functional Components
 2. JavaScript Expressions: Using {}, we can embed any JS expression directly within JSX. This includes variables, function calls, and more.
 
 --------------------------------------------------------------------------------------------------------------------------
-		16.Reusable Components
-		======================
-1. Modularity: Components are modular, allowing for easy reuse across different parts of an application.
-2. Consistency: Reusing components ensures UI consistency and reduces the chance of discrepancies.
-3. Efficiency: Reduces development time and effort by avoiding duplication of code.
-4. Maintainability: Changes made to a reused component reflect everywhere it's used, simplifying updates and bug fixes.
-
---------------------------------------------------------------------------------------------------------------------------
-
-		Summary :-
-		=======
-
-				10.File Extensions
-				11. Class vs Function Components
-				12.What is JSX?
-				13.Exporting component
-				14.Other important Points
-				15.Dynamic Components
-				16.Reusable Components
