@@ -1,0 +1,277 @@
+Fragments
+=========
+    <React.Fragments></React.Fragments>
+    <Fragments></Fragments>
+    <></>
+
+First Version (Using Plane Components)
+-------------
+function App() {
+
+  return (
+    <>
+      <div className="container">
+        <h1>Healthy Food</h1>
+        <ul className="list-group">
+          <li className="list-group-item">Kaju Paneer</li>
+          <li className="list-group-item">Paneer Masala</li>
+          <li className="list-group-item">Mix Veg</li>
+          <li className="list-group-item">Mashroom fry</li>
+          <li className="list-group-item">Paneer Tikka</li>
+          <li className="list-group-item">Masala Bhendi</li>
+        </ul>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+===================================================================
+Map Method
+==========
+
+We Convert the Array Elemenst into UI Elements
+We Write the Map Method inside the JSX Code
+
+Second Version (Using Map Method)
+--------------
+function App() {
+  let foodItems = [
+    "Kaju Paneer",
+    "Paneer Masala",
+    "Mix Veg",
+    "Mashroom fry",
+    "Paneer Tikka",
+    "Masala Bhendi",
+  ];
+
+  return (
+    <>
+      <div className="container">
+        <h1>Healthy Food</h1>
+        <ul className="list-group">
+          {foodItems.map((items) => (
+            <li key={items} className="list-group-item">
+              {items}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+===================================================================
+Conditional Rendering
+=====================
+
+We Specify some Conditions based on this our UI will Show.
+
+Version 3 (Using if-else Conditional Rendering)
+---------
+function App() {
+  // let foodItems = [
+  //   "Kaju Paneer",
+  //   "Paneer Masala",
+  //   "Mix Veg",
+  //   "Mashroom fry",
+  //   "Paneer Tikka",
+  //   "Masala Bhendi",
+  // ];
+  let foodItems = [];
+  if (foodItems.length === 0) {
+    return <h1>Foods Are Empty and I'm Hungry</h1>;
+  }
+
+  return (
+    <>
+      <div className="container">
+        <h1>Healthy Food</h1>
+
+        <ul className="list-group">
+          {foodItems.map((items) => (
+            <li key={items} className="list-group-item">
+              {items}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+
+Version 3 (Using ternary Conditional Rendering)
+---------
+
+function App() {
+  let foodItems = [
+    "Kaju Paneer",
+    "Paneer Masala",
+    "Mix Veg",
+    "Mashroom fry",
+    "Paneer Tikka",
+    "Masala Bhendi",
+  ];
+  // let foodItems = [];
+
+  let emptyMessage =
+    foodItems.length === 0 ? <h3>Foods Are Empty and I'm Hungry</h3> : null;
+
+  return (
+    <>
+      <div className="container">
+        <h1>Healthy Food</h1>
+        {/* {foodItems.length === 0 ? (
+          <h3>Foods Are Empty and I'm Hungry</h3>
+        ) : null} */}
+        {emptyMessage}
+        <ul className="list-group">
+          {foodItems.map((items) => (
+            <li key={items} className="list-group-item">
+              {items}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+Version 3 (Logical Opertors)
+---------
+
+function App() {
+  let foodItems = [
+    "Kaju Paneer",
+    "Paneer Masala",
+    "Mix Veg",
+    "Mashroom fry",
+    "Paneer Tikka",
+    "Masala Bhendi",
+  ];
+  // let foodItems = [];
+
+  return (
+    <>
+      <div className="container">
+        <h1>Healthy Food</h1>
+        {foodItems.length === 0 && (
+          <h3>Food Menu's are Empty, and I'm Hungry</h3>
+        )}
+        <ul className="list-group">
+          {foodItems.map((items) => (
+            <li key={items} className="list-group-item">
+              {items}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+===================================================================
+Passing Data via props
+======================
+
+We can send some data to the Child Components via Parent Components through Props to achived some task.
+
+Version 4
+=========
+
+App.JSX
+-------
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+function App() {
+  let foodItems = [
+    "Kaju Paneer",
+    "Paneer Masala",
+    "Mix Veg",
+    "Mashroom fry",
+    "Paneer Tikka",
+    "Masala Bhendi",
+  ];
+  // let foodItems = [];
+  return (
+    <>
+      <h1>Healthy Food</h1>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodItems items={foodItems}></FoodItems>
+    </>
+  );
+}
+
+export default App;
+
+components > FoodItems.JSX
+---------------------------
+import Item from "./Item";
+
+const FoodItems = ({ items }) => {
+  //   let foodItems = [
+  //     "Kaju Paneer",
+  //     "Paneer Masala",
+  //     "Mix Veg",
+  //     "Mashroom fry",
+  //     "Paneer Tikka",
+  //     "Masala Bhendi",
+  //   ];
+  return (
+    <>
+      <ul className="list-group">
+        {items.map((item) => (
+          <Item key={item} foodItem={item}></Item>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+export default FoodItems;
+
+components > Item.JSX
+---------------------
+const Item = ({ foodItem }) => {
+  return <li className="list-group-item">{foodItem}</li>;
+};
+
+export default Item;
+
+components > ErrorMessage.JSX
+-----------------------------
+const ErrorMessage = ({ items }) => {
+  //   let foodItems = [
+  //     "Kaju Paneer",
+  //     "Paneer Masala",
+  //     "Mix Veg",
+  //     "Mashroom fry",
+  //     "Paneer Tikka",
+  //     "Masala Bhendi",
+  //   ];
+  return (
+    <>{items.length === 0 && <h3>Food Menu's are Empty, and I'm Hungry</h3>}</>
+  );
+};
+
+export default ErrorMessage;
+
+
+===================================================================
+CSS Module
+==========
+
+Used to Style the Separate Compoent for this maintain separate css file.
+Syntax:
+cssfileName.module.css
+(Try to keep FirstName same as releavant Component Name)
